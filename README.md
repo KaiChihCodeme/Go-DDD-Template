@@ -3,10 +3,14 @@
 ## Introduction
 This is a repository for creating a DDD style Go template.
 
+Here implement some simple APIs to query MySQL DB and return the result from DB.
+And here would apply docker to pack Go API and DB in local. So you can try this project by your local site.
+
 ## Features
 * A DDD style Go/ Gin API Backend
 * Support Swagger (OpenAPI)
 * Support Log Middleware
+* R/W with MySQL Database via APIs
 
 ## Requirements
 * Go 1.22.1
