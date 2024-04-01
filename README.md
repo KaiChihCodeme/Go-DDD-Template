@@ -22,3 +22,13 @@ Our backend follows the DDD (Domain-Driven Design) structure to construct our Go
 1. Create a project folder
 2. Ensure you have Go installed and required versions (check by `go version` in your cli)
 3. Use this commad to initialize your project in your project folder: ```go mod init <project-owner>/<project-name>```
+
+## Packages
+* Gin
+* Viper -> configurations
+* Zap -> logger, and open to other repo to use
+
+## Make steps
+build: `make build`
+run: `make run`
+build&run: `make br`
