@@ -9,10 +9,14 @@ import (
 	"syscall"
 	"time"
 
+	_ "kaichihcodeme.com/go-template/docs/swagger/docs"
 	sysinit "kaichihcodeme.com/go-template/init"
 	logger "kaichihcodeme.com/go-template/pkg/zap-logger"
 )
 
+//	@title			Cafe API Swagger
+//	@version		1.0
+//	@description	This is the API documentation for Cafe API
 func main() {
 	srvr := sysinit.New()
 

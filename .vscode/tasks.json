@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "updateSwagger",
+            "type": "shell",
+            "command": [
+                "./scripts/swagger.sh"
+            ],
+            "args": [],
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
+                        "args": ["-c"]
+                    }
+                },
+            },
+            "osx": {
+                "options": {
+                    "shell": {
+                        "executable": "bash",
+                    }
+                },
+            },
+            "presentation": {
+                "reveal": "silent",
+                "close": true
+            }
+        }
+    ]
+}

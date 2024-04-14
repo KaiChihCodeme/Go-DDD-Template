@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Debug Gin Project",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/main.go",
+            "env": {
+                "GO111MODULE": "on",
+            },
+            "cwd": "${workspaceFolder}",
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "listening and serving HTTP on :{\\S+}",
+                "uriFormat": "http://localhost:%s/swagger/index.html"
+            }
+        },
+        {
+            "name": "Debug Gin Project w/ Swagger",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/main.go",
+            "env": {
+                "GO111MODULE": "on",
+            },
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "updateSwagger",
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "listening and serving HTTP on :{\\S+}",
+                "uriFormat": "http://localhost:%s/swagger/index.html"
+            }
+        }
+    ]
+}

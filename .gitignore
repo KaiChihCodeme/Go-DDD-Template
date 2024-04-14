@@ -19,3 +19,13 @@
 
 # Dependency directories (remove the comment below to include it)
 vendor/
+
+# Debug
+/cmd/__debug_bin*
+bin/
+
+# secrets
+/configs/secret/
+
+# swagger
+/docs/swagger/docs/
