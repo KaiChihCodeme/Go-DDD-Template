@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"os"
 
+	"kaichihcodeme.com/go-template/internal/application/middlewares"
 	"kaichihcodeme.com/go-template/internal/application/routes"
 	"kaichihcodeme.com/go-template/internal/infra/config"
 	logger "kaichihcodeme.com/go-template/pkg/zap-logger"
@@ -68,7 +69,7 @@ func New() *http.Server {
 	gin.SetMode(os.Getenv("GIN_MODE"))
 	router := gin.New()
 	// setup Middleware here
-	// router.Use(Middleware)
+	router.Use(middlewares.ErrorHandler())
 
 	// regist the routes
 	routes.RegisterApiRoutes(router)
