@@ -1,0 +1,29 @@
+version: '1'
+services:
+  db:
+    build: ./build/db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - db-data:/var/lib/mysql
+    restart: always
+
+  app:
+    build: ./build/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      Go-Template_MYSQL_HOST: db
+      Go-Template_MYSQL_DATABASE: ${MYSQL_DATABASE}
+      Go-Template_MYSQL_USER: ${MYSQL_USER}
+      Go-Template_MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      Go-Template_ENV: ${APP_ENV}
+    restart: always
+
+volumes:
+  db-data:
