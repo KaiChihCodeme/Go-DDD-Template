@@ -29,3 +29,6 @@ bin/
 
 # swagger
 /docs/swagger/docs/
+
+# secrets
+.env
