@@ -2,8 +2,10 @@ CREATE DATABASE IF NOT EXISTS cafe;
 USE cafe;
 
 CREATE TABLE IF NOT EXISTS cafe (
-    Uid BIGINT,
-    Name VARCHAR(100),
-    Address VARCHAR(100),
-    CreateTime TIME,
-)
+    Uid BIGINT NOT NULL,
+    Name VARCHAR(100) NOT NULL,
+    Address VARCHAR(100) NOT NULL,
+    CreateTime TIME NOT NULL,
+    MotifyTime TIME,
+    PRIMARY KEY (Uid)
+);
