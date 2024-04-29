@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS cafe;
+USE cafe;
+
+CREATE TABLE IF NOT EXISTS cafe (
+    Uid BIGINT,
+    Name VARCHAR(100),
+    Address VARCHAR(100),
+    CreateTime TIME,
+)

@@ -43,12 +43,26 @@ func New() *http.Server {
 	viper.SetDefault("mysql.max_open_conns", 10)
 
 	// set the version
+	// I only give Go-Template_ENV in the docker-compose file, so in the local environment,
+	// env should be empty.
 	var version string
 	env := viper.GetString("env")
 	if env == "" {
 		env = "local"
 	} else {
 		version = viper.GetString("version")
+	}
+
+	// get db setting
+	// If env is local, use the connection string defined in the config file
+	// Otherwise, use the connection string defined in the environment variable
+	if env != "local" {
+		mysqlHost := viper.GetString("MYSQL_HOST")
+		mysqlDatabase := viper.GetString("MYSQL_DATABASE")
+		mysqlUser := viper.GetString("MYSQL_USER")
+		mysqlPassword := viper.GetString("MYSQL_PASSWORD")
+		// form a connection string to mysql
+		viper.Set("mysql.connection_string", fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true", mysqlUser, mysqlPassword, mysqlHost, mysqlDatabase))
 	}
 
 	// set to config global vars model

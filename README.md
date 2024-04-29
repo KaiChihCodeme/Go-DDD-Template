@@ -26,9 +26,19 @@ Our backend follows the DDD (Domain-Driven Design) structure to construct our Go
 ## Packages
 * Gin
 * Viper -> configurations
-* Zap -> logger, and open to other repo to use
+* Zap -> logger, and open to other repo using
 
 ## Make steps
 build: `make build`
 run: `make run`
 build&run: `make br`
+
+## Build up setting
+### Local
+* setup the connection string of DB in `configs/go-template.json` 
+* then makefile
+* `make build`
+* `make run`
+### Other Env
+* create an `.env` file to specify the variables for DB and Env
+* then execute `docker-compose up`
