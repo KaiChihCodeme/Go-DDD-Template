@@ -23,7 +23,7 @@ var (
 )
 
 func New() *http.Server {
-	envPrefix := "Go-Template"
+	envPrefix := "GO_TEMPLATE"
 	configAddr := "configs/go-template.json"
 
 	// Load configuration via Viper
@@ -46,7 +46,7 @@ func New() *http.Server {
 	// I only give Go-Template_ENV in the docker-compose file, so in the local environment,
 	// env should be empty.
 	var version string
-	env := viper.GetString("env")
+	env := viper.GetString("ENV")
 	if env == "" {
 		env = "local"
 	} else {

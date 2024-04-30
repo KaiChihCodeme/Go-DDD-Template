@@ -4,6 +4,8 @@ services:
     build: 
       context: ./
       dockerfile: ./build/db/Dockerfile
+    ports:
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -22,11 +24,11 @@ services:
     depends_on:
       - db
     environment:
-      Go-Template_MYSQL_HOST: db
-      Go-Template_MYSQL_DATABASE: ${MYSQL_DATABASE}
-      Go-Template_MYSQL_USER: ${MYSQL_USER}
-      Go-Template_MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      Go-Template_ENV: ${APP_ENV}
+      GO_TEMPLATE_MYSQL_HOST: db
+      GO_TEMPLATE_MYSQL_DATABASE: ${MYSQL_DATABASE}
+      GO_TEMPLATE_MYSQL_USER: ${MYSQL_USER}
+      GO_TEMPLATE_MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      GO_TEMPLATE_ENV: ${APP_ENV}
     restart: always
 
 volumes:
