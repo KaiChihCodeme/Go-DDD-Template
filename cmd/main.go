@@ -9,9 +9,9 @@ import (
 	"syscall"
 	"time"
 
-	_ "kaichihcodeme.com/go-template/docs/swagger/docs"
-	sysinit "kaichihcodeme.com/go-template/init"
-	logger "kaichihcodeme.com/go-template/pkg/zap-logger"
+	_ "github.com/KaiChihCodeme/Go-DDD-Template/docs/swagger/docs"
+	sysinit "github.com/KaiChihCodeme/Go-DDD-Template/init"
+	logger "github.com/KaiChihCodeme/Go-DDD-Template/pkg/zap-logger"
 )
 
 //	@title			Cafe API Swagger

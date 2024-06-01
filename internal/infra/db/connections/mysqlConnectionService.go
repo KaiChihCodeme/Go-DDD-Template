@@ -6,9 +6,9 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 
-	serviceProvidersDb "kaichihcodeme.com/go-template/internal/domain/serviceProviders/db"
-	"kaichihcodeme.com/go-template/internal/infra/config"
-	logger "kaichihcodeme.com/go-template/pkg/zap-logger"
+	serviceProvidersDb "github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/serviceProviders/db"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/infra/config"
+	logger "github.com/KaiChihCodeme/Go-DDD-Template/pkg/zap-logger"
 )
 
 type MysqlConnectionService struct {

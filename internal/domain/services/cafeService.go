@@ -3,8 +3,8 @@ package services
 import (
 	"errors"
 
-	"kaichihcodeme.com/go-template/internal/domain/models"
-	serviceProvidersDb "kaichihcodeme.com/go-template/internal/domain/serviceProviders/db"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/models"
+	serviceProvidersDb "github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/serviceProviders/db"
 )
 
 type CafeService struct {

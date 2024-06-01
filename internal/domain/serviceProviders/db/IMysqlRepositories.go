@@ -1,6 +1,6 @@
 package serviceProvidersDb
 
-import "kaichihcodeme.com/go-template/internal/domain/models"
+import "github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/models"
 
 type IMysqlRepositories interface {
 	GetCafe(cafeRequst models.GetCafeRequest) (*models.Cafe, error)

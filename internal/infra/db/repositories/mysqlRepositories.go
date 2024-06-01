@@ -1,10 +1,10 @@
 package dbInfra
 
 import (
-	"kaichihcodeme.com/go-template/internal/domain/models"
-	serviceProvidersDb "kaichihcodeme.com/go-template/internal/domain/serviceProviders/db"
-	sqlConst "kaichihcodeme.com/go-template/internal/infra/sql"
-	logger "kaichihcodeme.com/go-template/pkg/zap-logger"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/models"
+	serviceProvidersDb "github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/serviceProviders/db"
+	sqlConst "github.com/KaiChihCodeme/Go-DDD-Template/internal/infra/sql"
+	logger "github.com/KaiChihCodeme/Go-DDD-Template/pkg/zap-logger"
 
 	"errors"
 )

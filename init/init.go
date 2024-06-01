@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"os"
 
-	"kaichihcodeme.com/go-template/internal/application/middlewares"
-	"kaichihcodeme.com/go-template/internal/application/routes"
-	"kaichihcodeme.com/go-template/internal/infra/config"
-	logger "kaichihcodeme.com/go-template/pkg/zap-logger"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/application/middlewares"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/application/routes"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/infra/config"
+	logger "github.com/KaiChihCodeme/Go-DDD-Template/pkg/zap-logger"
 
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
