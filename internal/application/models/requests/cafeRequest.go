@@ -1,6 +1,6 @@
 package requests
 
-import "kaichihcodeme.com/go-template/internal/domain/models"
+import "github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/models"
 
 type CafeRequest struct {
 	Name string `form:"name" binding:"required"`

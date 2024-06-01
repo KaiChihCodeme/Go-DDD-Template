@@ -23,8 +23,8 @@ swag init -g ./cmd/main.go -o ./docs/swagger/docs
 4. Go to the router location, here I wrote in `./init/init.go`. Then import the required Swagger libraries:
 ```
 import (
-    sysinit "kaichihcodeme.com/go-template/init"
-	logger "kaichihcodeme.com/go-template/pkg/zap-logger"
+    sysinit "github.com/KaiChihCodeme/Go-DDD-Template/init"
+	logger "github.com/KaiChihCodeme/Go-DDD-Template/pkg/zap-logger"
 )
 
 // Then add handler into router to specify the swagger routes
@@ -34,7 +34,7 @@ router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 5. Go to `./cmd/main.go`, import the required dependencies:
 ```
 import (
-    _ "kaichihcodeme.com/go-template/docs/swagger/docs" // the location of output swagger documentations
+    _ "github.com/KaiChihCodeme/Go-DDD-Template/docs/swagger/docs" // the location of output swagger documentations
 )
 ```
 

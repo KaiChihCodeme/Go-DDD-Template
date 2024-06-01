@@ -3,12 +3,12 @@ package routes
 import (
 	"github.com/gin-gonic/gin"
 
-	"kaichihcodeme.com/go-template/internal/application/controllers"
-	"kaichihcodeme.com/go-template/internal/domain/services"
-	"kaichihcodeme.com/go-template/internal/infra/config"
-	dbInfraConn "kaichihcodeme.com/go-template/internal/infra/db/connections"
-	dbInfra "kaichihcodeme.com/go-template/internal/infra/db/repositories"
-	logger "kaichihcodeme.com/go-template/pkg/zap-logger"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/application/controllers"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/services"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/infra/config"
+	dbInfraConn "github.com/KaiChihCodeme/Go-DDD-Template/internal/infra/db/connections"
+	dbInfra "github.com/KaiChihCodeme/Go-DDD-Template/internal/infra/db/repositories"
+	logger "github.com/KaiChihCodeme/Go-DDD-Template/pkg/zap-logger"
 )
 
 type Provider struct {

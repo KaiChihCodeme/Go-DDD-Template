@@ -5,10 +5,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"kaichihcodeme.com/go-template/internal/application/models/requests"
-	"kaichihcodeme.com/go-template/internal/application/models/responses"
-	"kaichihcodeme.com/go-template/internal/domain/services"
-	logger "kaichihcodeme.com/go-template/pkg/zap-logger"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/application/models/requests"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/application/models/responses"
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/services"
+	logger "github.com/KaiChihCodeme/Go-DDD-Template/pkg/zap-logger"
 )
 
 // service injection

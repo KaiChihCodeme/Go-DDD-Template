@@ -4,8 +4,8 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/KaiChihCodeme/Go-DDD-Template/internal/domain/errors"
 	"github.com/gin-gonic/gin"
-	"kaichihcodeme.com/go-template/internal/domain/errors"
 )
 
 func ErrorHandler() gin.HandlerFunc {
